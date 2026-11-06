@@ -1,0 +1,10 @@
+variable,delta_logloss,sd,retained
+Bacilloscopy index,0.3085,0.0346,True
+Histological index,0.1528,0.0518,True
+Lesion count,0.1226,0.0189,True
+Type-2 reaction,0.074,0.0173,True
+Type-1 reaction,0.0682,0.02,True
+Anti-PGL-1 titre,0.0604,0.0239,True
+Lesion colour,0.0264,0.0164,True
+Lesion morphology,0.0167,0.0099,True
+Sensibility,0.0018,0.0046,False

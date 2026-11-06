@@ -1,0 +1,3 @@
+target_head,trials,feasible_trials,best_separability,best_robustness,on_front
+multiclass,307,297,0.11953050447727623,0.1254250450600248,16
+anchored,193,190,0.13993159772073976,0.11119199374822533,4

@@ -1,0 +1,13 @@
+order,step,group,removed,remaining
+1,1-5 lesions,clinical,0,1030
+2,diffuse infiltration or 12+ lesions,clinical,1,1029
+3,diffuse infiltration,clinical,1,1028
+4,nodule,clinical,0,1028
+5,ENL (type-2 reaction),clinical,1,1027
+6,type-1 reaction,clinical,0,1027
+7,positive skin smear,laboratory,1,1026
+8,bacilloscopy index >= 4,laboratory,3,1023
+9,bacilloscopy index >= 5,laboratory,2,1021
+10,negative skin smear,laboratory,22,999
+11,maximum anti-PGL-1 titre,laboratory,0,999
+12,completeness (bacilloscopy or histology),completeness,83,916

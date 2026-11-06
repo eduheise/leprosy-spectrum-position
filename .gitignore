@@ -1,0 +1,15 @@
+# Patient data and everything derived from it never enter version control.
+data/raw/*
+!data/raw/README.md
+data/processed/
+results/
+
+# Environment and tool state
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+.idea/
+catboost_info/

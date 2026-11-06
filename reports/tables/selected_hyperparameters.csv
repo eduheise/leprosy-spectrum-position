@@ -1,0 +1,10 @@
+item,value
+n_estimators,477
+max_depth,3
+learning_rate,0.01889711055684212
+subsample,0.8918691255376182
+colsample_bytree,0.7830903456125354
+min_child_weight,7
+random seed,7
+class-balanced label MAE (objective 1),0.12433576279944207
+masking-drift MAE (objective 2),0.15391871689280673

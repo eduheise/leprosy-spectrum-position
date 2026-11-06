@@ -1,0 +1,18 @@
+kind,feature,name,mean_abs_contribution,value_contribution_corr
+numeric,BACILOSCOP_N,Bacilloscopy index,0.14838748669352253,0.9180748686838207
+numeric,HISTOLOG,Histological index,0.11092529754853814,0.8966916845104795
+numeric,NU_LESOES,Number of skin lesions,0.10357110783044748,0.7908785975636272
+numeric,PGL1,Anti-PGL-1 titre,0.09331004481753324,0.9301829632906372
+numeric,REAC_TIPO_1,Type-1 reaction (absent/present),0.03614136768627094,-0.9471004143236111
+numeric,REAC_TIPO_2,Type-2 reaction (absent/present),0.03525777130501237,0.9480388074487676
+block,lesion_color,Lesion colour,0.03715038819238291,
+block,lesion_element,Lesion type,0.03608826176734032,
+level,lesion_element__placa,type: plaque,0.03355734101103115,
+level,lesion_color__eritematosa,colour: erythematous,0.01733847017966419,
+level,lesion_color__hipercromica,colour: hyperchromic,0.013829664565191498,
+level,lesion_color__hipocromica,colour: hypochromic,0.011281463411412142,
+level,lesion_element__macula,type: macule,0.0032659919093962065,
+level,lesion_element__infiltracao_difusa,type: diffuse infiltration,0.0031104271839886197,
+level,lesion_color__normocromica,colour: normochromic,0.000661978351729698,
+level,lesion_element__nodulo,type: nodule,6.952646759003891e-05,
+level,lesion_element__papula,type: papule,0.0,

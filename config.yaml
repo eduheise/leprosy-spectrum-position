@@ -1,0 +1,193 @@
+# Every constant the pipeline uses. Code reads these through
+# src/leprosy_similarity/config.py; no number below is repeated in code.
+
+# The split, the search and the masking draws all derive from this seed.
+seed: 42
+
+folds:
+  # One stratified split of the analytic cohort, shared by the configuration
+  # search and every cross-validated result.
+  n_folds: 5
+  seed: 42
+
+backbones:
+  # Seed handed to every tree ensemble. It is separate from the split seed
+  # because the search was run with it, and changing it changes every trial.
+  seed: 7
+  # Library settings that are not searched. `seed_param` is the name under
+  # which each library takes its random seed.
+  lightgbm:
+    seed_param: random_state
+    fixed: {verbosity: -1, n_jobs: -1, bagging_freq: 5}
+  xgboost:
+    seed_param: random_state
+    fixed: {verbosity: 0, n_jobs: -1, tree_method: hist}
+  catboost:
+    seed_param: random_seed
+    fixed: {verbose: 0, thread_count: -1, allow_writing_files: false}
+  rf:
+    seed_param: random_state
+    fixed: {n_jobs: -1}
+
+imputation:
+  # Neighbours for the deterministic kNN fill and for the donor draws.
+  knn_neighbours: 5
+  iterative:
+    max_iter: 20
+    seed: 0
+  miceforest:
+    datasets: 3
+    iterations: 3
+    seed: 0
+
+search:
+  study_name: configuration_search
+  n_trials: 500
+  sampler_seed: 42
+  # The masking draws of objective 2 come from their own generator, seeded
+  # one above the split seed, so they never share a stream with the split.
+  masking_seed: 43
+  # Number of observed findings hidden per record when scoring objective 2:
+  # even sizes from 2 up to, but not including, the schema width minus one
+  # (15 columns -> 2..12). At least one finding always stays observed.
+  masking_sizes: [2, 4, 6, 8, 10, 12]
+  backbones: [lightgbm, xgboost, catboost, rf]
+  target_heads: [anchored, multiclass]
+  missing_value_strategies:
+    [native_routing, mean_median, knn, iterative_br, miceforest, mia_indicators]
+  # A random forest cannot route a missing value, so it needs an imputer.
+  infeasible: [[rf, native_routing]]
+  # Hyperparameter ranges per backbone. The prefix makes the Optuna parameter
+  # names unique across backbones; the order is the order of suggestion.
+  space:
+    lightgbm:
+      prefix: lgbm_
+      params:
+        n_estimators: {type: int, low: 100, high: 3000}
+        num_leaves: {type: int, low: 15, high: 255}
+        max_depth: {type: int, low: 3, high: 20}
+        learning_rate: {type: float, low: 0.005, high: 0.2, log: true}
+        min_child_samples: {type: int, low: 5, high: 80}
+        feature_fraction: {type: float, low: 0.5, high: 1.0}
+        bagging_fraction: {type: float, low: 0.5, high: 1.0}
+    xgboost:
+      prefix: xgb_
+      params:
+        n_estimators: {type: int, low: 100, high: 3000}
+        max_depth: {type: int, low: 3, high: 15}
+        learning_rate: {type: float, low: 0.005, high: 0.2, log: true}
+        subsample: {type: float, low: 0.5, high: 1.0}
+        colsample_bytree: {type: float, low: 0.5, high: 1.0}
+        min_child_weight: {type: int, low: 1, high: 20}
+    catboost:
+      prefix: cb_
+      params:
+        iterations: {type: int, low: 100, high: 3000}
+        depth: {type: int, low: 4, high: 10}
+        learning_rate: {type: float, low: 0.005, high: 0.2, log: true}
+        l2_leaf_reg: {type: float, low: 1.0, high: 30.0, log: true}
+        border_count: {type: int, low: 32, high: 254}
+    rf:
+      prefix: rf_
+      params:
+        n_estimators: {type: int, low: 100, high: 3000}
+        max_depth: {type: int, low: 5, high: 40}
+        min_samples_leaf: {type: int, low: 1, high: 20}
+        max_features: {type: categorical, choices: [sqrt, log2]}
+
+rescaling:
+  # Grid records positioned per batch when fitting the range; memory only,
+  # the result does not depend on it.
+  batch_size: 4000
+
+variable_screen:
+  # Grouped permutation importance with a random forest on the analytic
+  # cohort, before the configuration search exists.
+  seed: 7
+  n_folds: 5
+  n_repeats: 10
+  n_trees: 500
+  min_samples_leaf: 2
+  max_features: sqrt
+  knn_neighbours: 5
+
+confidence:
+  # The masking sweep runs on held-out records of the shared split. Records
+  # that carry every column but one are sampled per class (the sampling, the
+  # hidden subsets and the imputation draws use the top-level seed); from each
+  # record, `masks_per_record` subsets of `mask_sizes` observed columns are
+  # hidden at random.
+  records_per_class: 30
+  masks_per_record: 5
+  mask_sizes: [2, 3, 4, 5]
+  # Completions per masked record (M), for every candidate imputer; the kNN
+  # whole-record donors are drawn among this many nearest training records.
+  donor_draws: 20
+  donor_neighbours: 5
+  # Records are split in half: k is calibrated on one half, coverage is
+  # reported on the other.
+  calibration_split_seed: 7
+  # Requested coverages at which the imputers are compared (sharpness
+  # subject to calibration).
+  selection_levels: [0.80, 0.90, 0.95]
+  # Requested coverages a multiplier k is shipped for (the interface offers
+  # 0.90, 0.95, 0.99; the API also accepts 0.80).
+  levels: [0.80, 0.90, 0.95, 0.99]
+  # Requested coverages at which the calibration curve is read out.
+  curve_levels: [0.90, 0.95, 0.99, 0.999]
+  # Multiplier of the fixed band (confidence 1 - k sigma) reported beside the
+  # calibrated one.
+  fixed_band_multiplier: 2.0
+  # The calibration curve k(p) is a monotone spline through the empirical
+  # quantiles of drift / sigma at these requested coverages.
+  curve_grid: {low: 0.01, high: 0.999, points: 400}
+  # Requested coverages drawn on the coverage-by-missingness heatmap.
+  heatmap_grid: {low: 0.10, high: 0.999, points: 320}
+
+spectrum_position:
+  # Findings the disease moves toward the lepromatous pole as they intensify,
+  # fixed before the sweep runs. A sweep of one of these whose mean curve does
+  # not rise is a violation. The type-1 reaction and the colour and
+  # morphology levels carry no polar expectation and are read for behaviour.
+  expected_lepromatous: [BACILOSCOP_N, HISTOLOG, PGL1, NU_LESOES, REAC_TIPO_2]
+  # A mean curve that moves less than this between its first and last value
+  # is called flat; the same tolerance absorbs rounding when checking that
+  # a curve never steps back.
+  direction_tolerance: 1.0e-4
+  # The logistic comparison of the WHO class on bacilloscopy, with and
+  # without the position.
+  logistic_max_iter: 1000
+
+attribution:
+  # Largest allowed gap between a record's summed contributions and its
+  # position minus the base; Shapley efficiency makes the gap rounding only.
+  efficiency_tolerance: 1.0e-12
+  # Worker processes for the per-record decomposition (-1: every core). The
+  # result does not depend on it.
+  n_jobs: -1
+
+selection:
+  # Elbow rule on the Pareto front: walk in from the separability extreme
+  # while each step buys more drift than this many times the separability it
+  # costs. Both objectives are on the same 0-1 scale, so 1 compares like with
+  # like.
+  elbow_threshold: 1.0
+
+search_report:
+  # Hypervolume reference point: the worst feasible value of each objective,
+  # widened by this factor so the worst points still enclose some area.
+  hypervolume_margin: 1.02
+  # A trial counts as a visible rise of the hypervolume trace when it adds at
+  # least this share of the final hypervolume.
+  visible_rise_share: 0.005
+  # The trace is read in two parts: the opening trials, where most of the
+  # area is gained, and the rest, where each visible rise is reported.
+  early_trials: 100
+  # Seed of both importance estimators. The design-axis importances come from
+  # optuna's fANOVA forest, which is unseeded by default, so the second
+  # decimal of the shares moved between runs; seeded, the figure is fixed.
+  # The selected backbone's hyperparameter importances come from a random
+  # forest (mean decrease in impurity) on that backbone's own trials, which
+  # handles hyperparameters that exist only for that backbone.
+  importance_seed: 0
+  hyperparameter_importance_trees: 400

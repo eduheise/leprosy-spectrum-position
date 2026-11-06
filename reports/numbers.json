@@ -1,0 +1,1261 @@
+{
+  "attribution.base_raw": 0.5,
+  "attribution.base_rescaled_by_fold": [
+    0.536320453479,
+    0.541713301243,
+    0.544273217608,
+    0.544894765469,
+    0.54520989843
+  ],
+  "attribution.efficiency_gap_max": 1.7763568394002505e-15,
+  "attribution.efficiency_gap_raw_max": 1.609823385706477e-15,
+  "attribution.level_order": [
+    "lesion_element__placa",
+    "lesion_color__eritematosa",
+    "lesion_color__hipercromica",
+    "lesion_color__hipocromica",
+    "lesion_element__macula",
+    "lesion_element__infiltracao_difusa",
+    "lesion_color__normocromica",
+    "lesion_element__nodulo",
+    "lesion_element__papula"
+  ],
+  "attribution.mean_abs_contribution": {
+    "BACILOSCOP_N": 0.14838748669352253,
+    "HISTOLOG": 0.11092529754853814,
+    "NU_LESOES": 0.10357110783044748,
+    "PGL1": 0.09331004481753324,
+    "REAC_TIPO_1": 0.03614136768627094,
+    "REAC_TIPO_2": 0.03525777130501237,
+    "lesion_color": 0.03715038819238291,
+    "lesion_color__eritematosa": 0.01733847017966419,
+    "lesion_color__hipercromica": 0.013829664565191498,
+    "lesion_color__hipocromica": 0.011281463411412142,
+    "lesion_color__normocromica": 0.000661978351729698,
+    "lesion_element": 0.03608826176734032,
+    "lesion_element__infiltracao_difusa": 0.0031104271839886197,
+    "lesion_element__macula": 0.0032659919093962065,
+    "lesion_element__nodulo": 6.952646759003891e-05,
+    "lesion_element__papula": 0.0,
+    "lesion_element__placa": 0.03355734101103115
+  },
+  "attribution.n_clipped": 9,
+  "attribution.n_records": 916,
+  "attribution.n_reference_cases": 26,
+  "attribution.numeric_order": [
+    "BACILOSCOP_N",
+    "HISTOLOG",
+    "NU_LESOES",
+    "PGL1",
+    "REAC_TIPO_1",
+    "REAC_TIPO_2"
+  ],
+  "attribution.observed_imputed": {
+    "BACILOSCOP_N": {
+      "contribution_imputed": 0.1251283641678669,
+      "contribution_observed": 0.14993087433492228,
+      "contribution_overall": 0.14838748669352253,
+      "observed_share": 0.9377729257641921,
+      "ratio_observed_to_imputed": 1.198216530136855,
+      "reconstruction_mae": 1.5264260768335272,
+      "reconstruction_r2": 0.1654629649800362
+    },
+    "HISTOLOG": {
+      "contribution_imputed": 0.09893764143719648,
+      "contribution_observed": 0.15073336312582364,
+      "contribution_overall": 0.11092529754853814,
+      "observed_share": 0.2314410480349345,
+      "ratio_observed_to_imputed": 1.5235188643697959,
+      "reconstruction_mae": 1.8254716981132075,
+      "reconstruction_r2": 0.0380135683262141
+    },
+    "NU_LESOES": {
+      "contribution_imputed": 0.09984862422915894,
+      "contribution_observed": 0.10504648242851918,
+      "contribution_overall": 0.10357110783044748,
+      "observed_share": 0.7161572052401747,
+      "ratio_observed_to_imputed": 1.052057384260306,
+      "reconstruction_mae": 0.2691783712544109,
+      "reconstruction_r2": 0.5150226918499574
+    },
+    "PGL1": {
+      "contribution_imputed": 0.0814258998290698,
+      "contribution_observed": 0.09802022423369251,
+      "contribution_overall": 0.09331004481753324,
+      "observed_share": 0.7161572052401747,
+      "ratio_observed_to_imputed": 1.2037966352162852,
+      "reconstruction_mae": 1.000359801548521,
+      "reconstruction_r2": 0.235257537767349
+    },
+    "REAC_TIPO_1": {
+      "contribution_imputed": null,
+      "contribution_observed": 0.03614136768627094,
+      "contribution_overall": 0.03614136768627094,
+      "observed_share": 1.0,
+      "ratio_observed_to_imputed": null,
+      "reconstruction_mae": 0.225764192139738,
+      "reconstruction_r2": -0.2350035965177643
+    },
+    "REAC_TIPO_2": {
+      "contribution_imputed": null,
+      "contribution_observed": 0.03525777130501237,
+      "contribution_overall": 0.03525777130501237,
+      "observed_share": 1.0,
+      "ratio_observed_to_imputed": null,
+      "reconstruction_mae": 0.2722707423580786,
+      "reconstruction_r2": -0.279441943879958
+    }
+  },
+  "attribution.value_contribution_corr": {
+    "BACILOSCOP_N": 0.9180748686838207,
+    "HISTOLOG": 0.8966916845104795,
+    "NU_LESOES": 0.7908785975636272,
+    "PGL1": 0.9301829632906372,
+    "REAC_TIPO_1": -0.9471004143236111,
+    "REAC_TIPO_2": 0.9480388074487676
+  },
+  "cohort.attrition.after_criteria": 999,
+  "cohort.attrition.analytic": 916,
+  "cohort.attrition.intake": 1030,
+  "cohort.attrition.removed_by_completeness": 83,
+  "cohort.attrition.removed_by_criteria": 31,
+  "cohort.attrition.removed_by_step": {
+    "1-5 lesions": 0,
+    "ENL (type-2 reaction)": 1,
+    "bacilloscopy index >= 4": 3,
+    "bacilloscopy index >= 5": 2,
+    "completeness (bacilloscopy or histology)": 83,
+    "diffuse infiltration": 1,
+    "diffuse infiltration or 12+ lesions": 1,
+    "maximum anti-PGL-1 titre": 0,
+    "negative skin smear": 22,
+    "nodule": 0,
+    "positive skin smear": 1,
+    "type-1 reaction": 0
+  },
+  "cohort.description.after_criteria_by_class": {
+    "BB": 83,
+    "BL": 299,
+    "BT": 273,
+    "LL": 268,
+    "TT": 76
+  },
+  "cohort.description.bacilloscopy_class_spearman": {
+    "n": 859,
+    "rho": 0.8344412360870986
+  },
+  "cohort.description.bacilloscopy_recorded_share": 0.9377729257641921,
+  "cohort.description.by_class": {
+    "BB": 70,
+    "BL": 289,
+    "BT": 268,
+    "LL": 227,
+    "TT": 62
+  },
+  "cohort.description.by_site": {
+    "bauru": 260,
+    "fortaleza_manaus": 656
+  },
+  "cohort.description.class_share_pct": {
+    "after_criteria": {
+      "BB": 8.308308308308309,
+      "BL": 29.929929929929934,
+      "BT": 27.32732732732733,
+      "LL": 26.826826826826828,
+      "TT": 7.6076076076076085
+    },
+    "analytic": {
+      "BB": 7.641921397379912,
+      "BL": 31.55021834061135,
+      "BT": 29.257641921397383,
+      "LL": 24.781659388646286,
+      "TT": 6.768558951965066
+    },
+    "intake": {
+      "BB": 8.349514563106796,
+      "BL": 29.02912621359223,
+      "BT": 26.893203883495147,
+      "LL": 28.155339805825243,
+      "TT": 7.572815533980583
+    }
+  },
+  "cohort.description.histology_by_site": {
+    "bauru": 212
+  },
+  "cohort.description.histology_recorded": 212,
+  "cohort.description.histology_recorded_share": 0.2314410480349345,
+  "cohort.description.histology_spearman_within_centre": {
+    "n": 212,
+    "p": 8.283696431609686e-19,
+    "rho": 0.5588020163276072
+  },
+  "cohort.description.lesion_tier_by_class": {
+    "BB": {
+      "1": 4,
+      "2": 25,
+      "3": 1
+    },
+    "BL": {
+      "1": 0,
+      "2": 202,
+      "3": 32
+    },
+    "BT": {
+      "1": 85,
+      "2": 142,
+      "3": 0
+    },
+    "LL": {
+      "1": 0,
+      "2": 56,
+      "3": 66
+    },
+    "TT": {
+      "1": 43,
+      "2": 0,
+      "3": 0
+    }
+  },
+  "cohort.description.level_pct_by_class": {
+    "lesion_color__eritematosa": {
+      "BB": 43.333333333333336,
+      "BL": 67.09401709401709,
+      "BT": 43.61233480176212,
+      "LL": 47.540983606557376,
+      "TT": 25.581395348837212
+    },
+    "lesion_color__hipercromica": {
+      "BB": 16.666666666666664,
+      "BL": 15.81196581196581,
+      "BT": 17.180616740088105,
+      "LL": 23.770491803278688,
+      "TT": 30.23255813953488
+    },
+    "lesion_color__hipocromica": {
+      "BB": 40.0,
+      "BL": 13.247863247863249,
+      "BT": 38.76651982378855,
+      "LL": 9.836065573770492,
+      "TT": 44.18604651162791
+    },
+    "lesion_color__normocromica": {
+      "BB": 0.0,
+      "BL": 3.8461538461538463,
+      "BT": 0.4405286343612335,
+      "LL": 18.852459016393443,
+      "TT": 0.0
+    },
+    "lesion_element__infiltracao_difusa": {
+      "BB": 0.0,
+      "BL": 11.538461538461538,
+      "BT": 0.0,
+      "LL": 50.81967213114754,
+      "TT": 0.0
+    },
+    "lesion_element__macula": {
+      "BB": 26.666666666666668,
+      "BL": 8.974358974358974,
+      "BT": 22.90748898678414,
+      "LL": 2.459016393442623,
+      "TT": 25.581395348837212
+    },
+    "lesion_element__nodulo": {
+      "BB": 3.3333333333333335,
+      "BL": 4.700854700854701,
+      "BT": 0.0,
+      "LL": 9.836065573770492,
+      "TT": 0.0
+    },
+    "lesion_element__papula": {
+      "BB": 0.0,
+      "BL": 4.273504273504273,
+      "BT": 0.4405286343612335,
+      "LL": 3.278688524590164,
+      "TT": 0.0
+    },
+    "lesion_element__placa": {
+      "BB": 70.0,
+      "BL": 70.51282051282051,
+      "BT": 76.65198237885463,
+      "LL": 33.60655737704918,
+      "TT": 74.4186046511628
+    }
+  },
+  "cohort.description.mean_by_class": {
+    "BACILOSCOP_N": {
+      "BB": 1.2741935483870968,
+      "BL": 2.9572953736654806,
+      "BT": 0.17578125,
+      "LL": 3.9278846153846154,
+      "TT": 0.0
+    },
+    "HISTOLOG": {
+      "BB": 2.676470588235294,
+      "BL": 3.5434782608695654,
+      "BT": 0.8484848484848485,
+      "LL": 4.0,
+      "TT": 0.3333333333333333
+    },
+    "PGL1": {
+      "BB": 1.7333333333333334,
+      "BL": 2.572649572649573,
+      "BT": 0.5726872246696035,
+      "LL": 2.762295081967213,
+      "TT": 0.046511627906976744
+    }
+  },
+  "cohort.description.missing_by_column": {
+    "BACILOSCOP_N": 57,
+    "HISTOLOG": 704,
+    "NU_LESOES": 260,
+    "PGL1": 260,
+    "REAC_TIPO_1": 0,
+    "REAC_TIPO_2": 0,
+    "lesion_color__eritematosa": 260,
+    "lesion_color__hipercromica": 260,
+    "lesion_color__hipocromica": 260,
+    "lesion_color__normocromica": 260,
+    "lesion_element__infiltracao_difusa": 260,
+    "lesion_element__macula": 260,
+    "lesion_element__nodulo": 260,
+    "lesion_element__papula": 260,
+    "lesion_element__placa": 260
+  },
+  "cohort.description.n_histology_only": 57,
+  "cohort.description.n_records": 916,
+  "cohort.description.n_with_bacilloscopy": 859,
+  "cohort.description.only_histology_missing": 656,
+  "cohort.description.paucibacillary": {
+    "after_criteria": {
+      "n": 342,
+      "of": 999
+    },
+    "analytic": {
+      "n": 323,
+      "of": 916
+    },
+    "intake": {
+      "n": 346,
+      "of": 1030
+    }
+  },
+  "cohort.description.records_with_every_class_excluded": 0,
+  "cohort.description.reference_case_conflicts": 0,
+  "cohort.description.removed_by_completeness_by_class": {
+    "BB": 13,
+    "BL": 10,
+    "BT": 5,
+    "LL": 41,
+    "TT": 14
+  },
+  "cohort.description.removed_by_completeness_by_site": {
+    "bauru": 83
+  },
+  "cohort.description.removed_by_completeness_multibacillary": 64,
+  "cohort.description.removed_by_criteria_by_class": {
+    "BB": 3,
+    "BL": 0,
+    "BT": 4,
+    "LL": 22,
+    "TT": 2
+  },
+  "cohort.description.sensibility_altered_pct_by_class": {
+    "BB": 80.0,
+    "BL": 89.31623931623932,
+    "BT": 92.51101321585902,
+    "LL": 90.1639344262295,
+    "TT": 95.34883720930233
+  },
+  "cohort.description.sensibility_altered_share": 0.9054878048780488,
+  "cohort.description.sensibility_recorded": 656,
+  "cohort.description.smear_negative": {
+    "n": 300,
+    "paucibacillary_share": 0.8933333333333333
+  },
+  "cohort.description.smear_negative_few_lesions": {
+    "n": 124,
+    "paucibacillary": 124
+  },
+  "cohort.description.smear_negative_more_lesions": {
+    "multibacillary": 9,
+    "n": 131
+  },
+  "cohort.description.smear_positive": {
+    "multibacillary_share": 0.9409660107334525,
+    "n": 559
+  },
+  "cohort.description.who_rule_agreement": {
+    "agree": 510,
+    "n": 656,
+    "share": 0.7774390243902439
+  },
+  "cohort.description.without_clinical_examination": 260,
+  "cohort.description.without_clinical_examination_by_class": {
+    "BB": 40,
+    "BL": 55,
+    "BT": 41,
+    "LL": 105,
+    "TT": 19
+  },
+  "cohort.description.without_clinical_examination_by_site": {
+    "bauru": 260
+  },
+  "cohort.description.without_clinical_examination_carries": {
+    "bacilloscopy_only": 48,
+    "both_indices": 155,
+    "histology_only": 57
+  },
+  "confidence.calibration_pairs": 375,
+  "confidence.calibration_pairs_nonzero_sigma": 374,
+  "confidence.fixed_band.0.coverage": 1.0,
+  "confidence.fixed_band.0.drift_median": 0.0,
+  "confidence.fixed_band.0.drift_p90": 0.0,
+  "confidence.fixed_band.0.half_width_mean": 0.14761675413803146,
+  "confidence.fixed_band.0.zero_drift": 1.0,
+  "confidence.fixed_band.1.coverage": 0.9771428571428571,
+  "confidence.fixed_band.1.drift_median": 0.0,
+  "confidence.fixed_band.1.drift_p90": 0.06133235525160387,
+  "confidence.fixed_band.1.half_width_mean": 0.16327035227341738,
+  "confidence.fixed_band.1.zero_drift": 0.7861904761904762,
+  "confidence.fixed_band.2.coverage": 0.9482758620689655,
+  "confidence.fixed_band.2.drift_median": 0.0,
+  "confidence.fixed_band.2.drift_p90": 0.13186588160190882,
+  "confidence.fixed_band.2.half_width_mean": 0.18120378332255174,
+  "confidence.fixed_band.2.zero_drift": 0.632183908045977,
+  "confidence.fixed_band.3.coverage": 0.9138755980861244,
+  "confidence.fixed_band.3.drift_median": 0.0018560630083418461,
+  "confidence.fixed_band.3.drift_p90": 0.17552200244647595,
+  "confidence.fixed_band.3.half_width_mean": 0.17863926608517275,
+  "confidence.fixed_band.3.zero_drift": 0.49282296650717705,
+  "confidence.fixed_band.4.coverage": 0.8602150537634409,
+  "confidence.fixed_band.4.drift_median": 0.026688670031717487,
+  "confidence.fixed_band.4.drift_p90": 0.18862460365872152,
+  "confidence.fixed_band.4.half_width_mean": 0.19052768470491305,
+  "confidence.fixed_band.4.zero_drift": 0.3118279569892473,
+  "confidence.fixed_band.5.coverage": 0.856353591160221,
+  "confidence.fixed_band.5.drift_median": 0.04902542371622742,
+  "confidence.fixed_band.5.drift_p90": 0.25317474638562343,
+  "confidence.fixed_band.5.half_width_mean": 0.19385154641142718,
+  "confidence.fixed_band.5.zero_drift": 0.19337016574585636,
+  "confidence.fixed_band_coverage": 0.8946666666666667,
+  "confidence.fixed_band_multiplier": 2.0,
+  "confidence.held_out_pairs": 375,
+  "confidence.held_out_records": 75,
+  "confidence.k.0.8": 1.0905006541133986,
+  "confidence.k.0.9": 1.848975080592901,
+  "confidence.k.0.95": 2.68744626287275,
+  "confidence.k.0.99": 3.910496623481098,
+  "confidence.k.0.999": 14.201986979088755,
+  "confidence.k_held_out_coverage.0.8": 0.7626666666666667,
+  "confidence.k_held_out_coverage.0.9": 0.8746666666666667,
+  "confidence.k_held_out_coverage.0.95": 0.9333333333333333,
+  "confidence.k_held_out_coverage.0.99": 0.976,
+  "confidence.k_held_out_coverage.0.999": 0.984,
+  "confidence.mean_confidence_middle": 0.8069279511662345,
+  "confidence.mean_confidence_poles": 0.8249735926989572,
+  "confidence.n_pairs": 750,
+  "confidence.n_records": 150,
+  "confidence.pairs_by_size.2": 174,
+  "confidence.pairs_by_size.3": 209,
+  "confidence.pairs_by_size.4": 186,
+  "confidence.pairs_by_size.5": 181,
+  "confidence.rank_agreement.bayesian_ridge": -0.44511622606840223,
+  "confidence.rank_agreement.forest": -0.5081022972100362,
+  "confidence.rank_agreement.knn_donor": -0.37596670471443516,
+  "confidence.runner_up.0.8": "bayesian_ridge",
+  "confidence.runner_up.0.9": "forest",
+  "confidence.runner_up.0.95": "forest",
+  "confidence.runner_up_extra_width.0.8": 0.04101056504076328,
+  "confidence.runner_up_extra_width.0.9": 0.09192915718365469,
+  "confidence.runner_up_extra_width.0.95": 0.047099644832097276,
+  "confidence.selected_arm": "knn_donor",
+  "confidence.sharpness.bayesian_ridge.0.8.coverage": 0.752,
+  "confidence.sharpness.bayesian_ridge.0.8.mean_width": 0.20720561881311164,
+  "confidence.sharpness.bayesian_ridge.0.9.coverage": 0.8986666666666666,
+  "confidence.sharpness.bayesian_ridge.0.9.mean_width": 0.3728753377066219,
+  "confidence.sharpness.bayesian_ridge.0.95.coverage": 0.9706666666666667,
+  "confidence.sharpness.bayesian_ridge.0.95.mean_width": 0.528395137748655,
+  "confidence.sharpness.forest.0.8.coverage": 0.76,
+  "confidence.sharpness.forest.0.8.mean_width": 0.21060038637816184,
+  "confidence.sharpness.forest.0.9.coverage": 0.9253333333333333,
+  "confidence.sharpness.forest.0.9.mean_width": 0.3677293046718978,
+  "confidence.sharpness.forest.0.95.coverage": 0.9706666666666667,
+  "confidence.sharpness.forest.0.95.mean_width": 0.5121199842768585,
+  "confidence.sharpness.knn_donor.0.8.coverage": 0.7626666666666667,
+  "confidence.sharpness.knn_donor.0.8.mean_width": 0.1990427626495779,
+  "confidence.sharpness.knn_donor.0.9.coverage": 0.8746666666666667,
+  "confidence.sharpness.knn_donor.0.9.mean_width": 0.33677029526380564,
+  "confidence.sharpness.knn_donor.0.95.coverage": 0.9333333333333333,
+  "confidence.sharpness.knn_donor.0.95.mean_width": 0.4890842880182402,
+  "confidence.single_finding_pairs": 2100,
+  "confidence.zero_drift_pairs": 306,
+  "confidence.zero_drift_share": 0.408,
+  "position.n_clipped_ceiling": 0,
+  "position.n_clipped_floor": 9,
+  "position.n_folds": 5,
+  "position.n_records": 916,
+  "position.order.exact_share": 0.5982532751091703,
+  "position.order.largest_confusion": {
+    "count": 80,
+    "read_as": "BL",
+    "recorded": "LL"
+  },
+  "position.order.mae": 0.1253372091031679,
+  "position.order.mae_class_balanced": 0.12433576279944207,
+  "position.order.mae_middle": 0.1271147792393615,
+  "position.order.mae_poles": 0.121480681506651,
+  "position.order.n_exact": 548,
+  "position.order.n_within_one_step": 886,
+  "position.order.per_class_mae": {
+    "BB": 0.16944071111892933,
+    "BL": 0.09899056756859499,
+    "BT": 0.14638747305011435,
+    "LL": 0.13504601875956787,
+    "TT": 0.07181404350000384
+  },
+  "position.order.per_class_mean": {
+    "BB": 0.5405761105375718,
+    "BL": 0.7592566750752566,
+    "BT": 0.25576247231395177,
+    "LL": 0.8649539812404321,
+    "TT": 0.07181404350000384
+  },
+  "position.order.per_class_median": {
+    "BB": 0.5759283847850112,
+    "BL": 0.7762468097009587,
+    "BT": 0.23855145001940492,
+    "LL": 0.9011846199396167,
+    "TT": 0.026549758994346296
+  },
+  "position.order.per_class_silhouette": {
+    "BB": -0.19559363768549384,
+    "BL": 0.0007528691502548515,
+    "BT": -0.1961758320542726,
+    "LL": 0.26065541249745766,
+    "TT": 0.5551544804160724
+  },
+  "position.order.quadratic_kappa": 0.8485569603273081,
+  "position.order.silhouette": 0.030064692116390197,
+  "position.order.spearman": 0.8458605300693339,
+  "position.order.steps_between_means": [
+    0.18394842881394793,
+    0.28481363822362005,
+    0.2186805645376848,
+    0.10569730616517548
+  ],
+  "position.order.within_one_step_share": 0.9672489082969432,
+  "position.sweep.BACILOSCOP_N": {
+    "delta": 0.33499103606618813,
+    "direction": "up",
+    "mean": [
+      0.4078169410522538,
+      0.5612174819886245,
+      0.6585443340890796,
+      0.729432630359088,
+      0.7812039699253246,
+      0.7732554262642712,
+      0.7428079771184419
+    ],
+    "missing_mean": 0.6607097838983386,
+    "monotonicity": "non_monotone",
+    "spearman": 0.8571428571428573,
+    "values": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0
+    ]
+  },
+  "position.sweep.HISTOLOG": {
+    "delta": 0.24723250914107492,
+    "direction": "up",
+    "mean": [
+      0.4660366185181481,
+      0.561939018557375,
+      0.6006923733582817,
+      0.6536190751637372,
+      0.7065863741955808,
+      0.7136449820302394,
+      0.713269127659223
+    ],
+    "missing_mean": 0.5787180762206524,
+    "monotonicity": "non_monotone",
+    "spearman": 0.9642857142857145,
+    "values": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0
+    ]
+  },
+  "position.sweep.NU_LESOES": {
+    "delta": 0.20814233729959308,
+    "direction": "up",
+    "mean": [
+      0.4421343717105063,
+      0.6109106962972725,
+      0.6502767090100994
+    ],
+    "missing_mean": 0.5613938801306926,
+    "monotonicity": "monotone_up",
+    "spearman": 1.0,
+    "values": [
+      1.0,
+      2.0,
+      3.0
+    ]
+  },
+  "position.sweep.PGL1": {
+    "delta": 0.1773039242129164,
+    "direction": "up",
+    "mean": [
+      0.5026197365508313,
+      0.5708185938150472,
+      0.600004975389014,
+      0.6244062206368761,
+      0.6799236607637477
+    ],
+    "missing_mean": 0.5704108300778523,
+    "monotonicity": "monotone_up",
+    "spearman": 0.9999999999999999,
+    "values": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0
+    ]
+  },
+  "position.sweep.REAC_TIPO_1": {
+    "delta": 0.047077636058414085,
+    "direction": "up",
+    "mean": [
+      0.5610850976469676,
+      0.6081627337053817
+    ],
+    "missing_mean": 0.5604373633258354,
+    "monotonicity": "monotone_up",
+    "spearman": 0.9999999999999999,
+    "values": [
+      0.0,
+      1.0
+    ]
+  },
+  "position.sweep.REAC_TIPO_2": {
+    "delta": 0.17985105502758503,
+    "direction": "up",
+    "mean": [
+      0.5426772353263598,
+      0.7225282903539448
+    ],
+    "missing_mean": 0.5402499308796965,
+    "monotonicity": "monotone_up",
+    "spearman": 0.9999999999999999,
+    "values": [
+      0.0,
+      1.0
+    ]
+  },
+  "position.sweep.baseline_mean_position": 0.5748983339007604,
+  "position.sweep.level_shift": {
+    "lesion_color__eritematosa": -0.017178785357440447,
+    "lesion_color__hipercromica": 0.009816044477188701,
+    "lesion_color__hipocromica": 0.008852385817760633,
+    "lesion_color__normocromica": 0.010122410206669555,
+    "lesion_element__infiltracao_difusa": 0.029849438896026682,
+    "lesion_element__macula": 0.009138983200765328,
+    "lesion_element__nodulo": 0.016278988814573837,
+    "lesion_element__papula": 0.010443743935998251,
+    "lesion_element__placa": -0.010994654056127722
+  },
+  "position.sweep.max_level_shift": 0.029849438896026682,
+  "position.sweep.violations": [],
+  "position.who": {
+    "agreement": 0.9181222707423581,
+    "auc": 0.9655788116258307,
+    "n": 916,
+    "n_agree": 841,
+    "n_multibacillary": 593,
+    "n_paucibacillary": 323,
+    "sensitivity": 0.9106239460370995,
+    "specificity": 0.9318885448916409,
+    "true_negative": 301,
+    "true_positive": 540,
+    "youden_fpr": 0.06811145510835913,
+    "youden_threshold": 0.5271977106851095,
+    "youden_tpr": 0.9106239460370995
+  },
+  "position.who.bacilloscopy_increment": {
+    "median": {
+      "auc_bacilloscopy": 0.9439256904841402,
+      "auc_bacilloscopy_and_position": 0.9687364982834824,
+      "fill": 2.0,
+      "increment": 0.024810807799342194
+    },
+    "n": 916,
+    "n_without_smear": 57,
+    "zero": {
+      "auc_bacilloscopy": 0.927749483885451,
+      "auc_bacilloscopy_and_position": 0.9685902297916256,
+      "fill": 0.0,
+      "increment": 0.04084074590617459
+    }
+  },
+  "position.who.within_class": {
+    "class": "BT",
+    "mannwhitney_u": 1734.0,
+    "median_multibacillary": 0.4615042143061926,
+    "median_paucibacillary": 0.23760549056980193,
+    "n_multibacillary": 10,
+    "n_paucibacillary": 258,
+    "p_one_sided": 0.032568671168034094,
+    "rank_biserial": 0.344186046511628
+  },
+  "reference_cases.by_class": {
+    "BB": 8,
+    "LL": 9,
+    "TT": 9
+  },
+  "reference_cases.n": 26,
+  "reference_cases.n_missing_values": 0,
+  "reference_cases.type1_reaction_by_class": {
+    "BB": 7,
+    "LL": 0,
+    "TT": 4
+  },
+  "rescaling.anchors_rescaled": {
+    "BB": 0.5453944509801215,
+    "BL": 0.8380041816685084,
+    "BT": 0.2527847202917347,
+    "LL": 1.0,
+    "TT": 0.0
+  },
+  "rescaling.argmax_record": {
+    "BACILOSCOP_N": 5.0,
+    "HISTOLOG": 6.0,
+    "NU_LESOES": 3.0,
+    "PGL1": 4.0,
+    "REAC_TIPO_1": 0.0,
+    "REAC_TIPO_2": 1.0,
+    "lesion_color__eritematosa": 0.0,
+    "lesion_color__hipercromica": 1.0,
+    "lesion_color__hipocromica": 0.0,
+    "lesion_color__normocromica": 0.0,
+    "lesion_element__infiltracao_difusa": 1.0,
+    "lesion_element__macula": 0.0,
+    "lesion_element__nodulo": 0.0,
+    "lesion_element__papula": 0.0,
+    "lesion_element__placa": 0.0
+  },
+  "rescaling.argmin_record": {
+    "BACILOSCOP_N": 0.0,
+    "HISTOLOG": 0.0,
+    "NU_LESOES": 1.0,
+    "PGL1": 0.0,
+    "REAC_TIPO_1": 0.0,
+    "REAC_TIPO_2": 0.0,
+    "lesion_color__eritematosa": 0.0,
+    "lesion_color__hipercromica": 0.0,
+    "lesion_color__hipocromica": 1.0,
+    "lesion_color__normocromica": 0.0,
+    "lesion_element__infiltracao_difusa": 0.0,
+    "lesion_element__macula": 0.0,
+    "lesion_element__nodulo": 0.0,
+    "lesion_element__papula": 0.0,
+    "lesion_element__placa": 1.0
+  },
+  "rescaling.base_raw": 0.5,
+  "rescaling.base_rescaled": 0.5453944509801215,
+  "rescaling.bb_weight_at_max": 0.22209096278795037,
+  "rescaling.cohort_at_ceiling": 0,
+  "rescaling.cohort_at_floor": 12,
+  "rescaling.cohort_outside_range": 0,
+  "rescaling.cohort_raw_span": [
+    0.03402570576084462,
+    0.8844631473688597
+  ],
+  "rescaling.cohort_rescaled_max": 0.9953850830249681,
+  "rescaling.fold_ceiling_range": [
+    0.8831950207468879,
+    0.8983387978142077
+  ],
+  "rescaling.fold_floor_range": [
+    0.03657648914230256,
+    0.04061946902654867
+  ],
+  "rescaling.fold_ranges": [
+    {
+      "fold": 0,
+      "hi": 0.8907631765122037,
+      "lo": 0.03810221652317274
+    },
+    {
+      "fold": 1,
+      "hi": 0.8831950207468879,
+      "lo": 0.04061946902654867
+    },
+    {
+      "fold": 2,
+      "hi": 0.8983387978142077,
+      "lo": 0.03925669940584455
+    },
+    {
+      "fold": 3,
+      "hi": 0.8867100097099675,
+      "lo": 0.038153320370043015
+    },
+    {
+      "fold": 4,
+      "hi": 0.8870590781216187,
+      "lo": 0.03657648914230256
+    }
+  ],
+  "rescaling.n_grid_records": 58800,
+  "rescaling.reachable_max": 0.8884060416842461,
+  "rescaling.reachable_min": 0.03402570576084462,
+  "rescaling.reference_raw": {
+    "BB": {
+      "max": 0.6766714345037603,
+      "mean": 0.5995021046079394,
+      "min": 0.4909738717339668
+    },
+    "LL": {
+      "max": 0.8869476912874079,
+      "mean": 0.8769236335121089,
+      "min": 0.8679140973846483
+    },
+    "TT": {
+      "max": 0.06516021042563366,
+      "mean": 0.0531526959342094,
+      "min": 0.04235542027628189
+    }
+  },
+  "rescaling.reference_rescaled_mean": {
+    "BB": 0.6618555871091489,
+    "LL": 0.9865605425483872,
+    "TT": 0.022386973774030757
+  },
+  "rescaling.span": 0.8543803359234015,
+  "rescaling.weight_shares_at_max": {
+    "BB": 0.22209096278795037,
+    "LL": 0.7773605602902709,
+    "TT": 0.0005484769217787528
+  },
+  "rescaling.weight_shares_at_min": {
+    "BB": 0.06587101216433326,
+    "LL": 0.0010901996786779895,
+    "TT": 0.9330387881569887
+  },
+  "screen.baseline_logloss": 0.6954032380565501,
+  "screen.delta_logloss": {
+    "Anti-PGL-1 titre": 0.0604,
+    "Bacilloscopy index": 0.3085,
+    "Histological index": 0.1528,
+    "Lesion colour": 0.0264,
+    "Lesion count": 0.1226,
+    "Lesion morphology": 0.0167,
+    "Sensibility": 0.0018,
+    "Type-1 reaction": 0.0682,
+    "Type-2 reaction": 0.074
+  },
+  "screen.n_records": 916,
+  "screen.reaction_prevalence_pct": {
+    "type1_pct": {
+      "BB": 55.7,
+      "BL": 41.2,
+      "BT": 19.8,
+      "LL": 0.0,
+      "TT": 0.0
+    },
+    "type2_pct": {
+      "BB": 1.4,
+      "BL": 35.3,
+      "BT": 0.0,
+      "LL": 70.5,
+      "TT": 0.0
+    }
+  },
+  "screen.reaction_shape": {
+    "Type-1 reaction": {
+      "r2_vs_centrality_pct": 16.1,
+      "r2_vs_position_pct": 0.5,
+      "rho_vs_centrality": -0.402,
+      "rho_vs_position": -0.074
+    },
+    "Type-2 reaction": {
+      "r2_vs_centrality_pct": 16.7,
+      "r2_vs_position_pct": 36.6,
+      "rho_vs_centrality": 0.408,
+      "rho_vs_position": 0.605
+    }
+  },
+  "screen.rejected": [
+    "Sensibility"
+  ],
+  "screen.retained": [
+    "Bacilloscopy index",
+    "Histological index",
+    "Lesion count",
+    "Type-2 reaction",
+    "Type-1 reaction",
+    "Anti-PGL-1 titre",
+    "Lesion colour",
+    "Lesion morphology"
+  ],
+  "screen.sd": {
+    "Anti-PGL-1 titre": 0.0239,
+    "Bacilloscopy index": 0.0346,
+    "Histological index": 0.0518,
+    "Lesion colour": 0.0164,
+    "Lesion count": 0.0189,
+    "Lesion morphology": 0.0099,
+    "Sensibility": 0.0046,
+    "Type-1 reaction": 0.02,
+    "Type-2 reaction": 0.0173
+  },
+  "search.by_backbone": {
+    "catboost": {
+      "best_robustness": 0.13656435221297783,
+      "best_separability": 0.14742468817216361,
+      "feasible_trials": 73,
+      "on_front": 0,
+      "trials": 73
+    },
+    "lightgbm": {
+      "best_robustness": 0.13669126481163463,
+      "best_separability": 0.1419824646615922,
+      "feasible_trials": 76,
+      "on_front": 0,
+      "trials": 76
+    },
+    "rf": {
+      "best_robustness": 0.1321256145629824,
+      "best_separability": 0.14890585294091824,
+      "feasible_trials": 66,
+      "on_front": 1,
+      "trials": 79
+    },
+    "xgboost": {
+      "best_robustness": 0.11119199374822533,
+      "best_separability": 0.11953050447727623,
+      "feasible_trials": 272,
+      "on_front": 19,
+      "trials": 272
+    }
+  },
+  "search.by_missing_values": {
+    "iterative_br": {
+      "best_robustness": 0.13247184903649706,
+      "best_separability": 0.15145476931789797,
+      "feasible_trials": 39,
+      "on_front": 0,
+      "trials": 39
+    },
+    "knn": {
+      "best_robustness": 0.13411127725995992,
+      "best_separability": 0.12208502541507209,
+      "feasible_trials": 124,
+      "on_front": 7,
+      "trials": 124
+    },
+    "mean_median": {
+      "best_robustness": 0.11119199374822533,
+      "best_separability": 0.13061951537029662,
+      "feasible_trials": 177,
+      "on_front": 11,
+      "trials": 177
+    },
+    "mia_indicators": {
+      "best_robustness": 0.1321256145629824,
+      "best_separability": 0.11953050447727623,
+      "feasible_trials": 74,
+      "on_front": 2,
+      "trials": 74
+    },
+    "miceforest": {
+      "best_robustness": 0.15783247164986527,
+      "best_separability": 0.14261544899987696,
+      "feasible_trials": 40,
+      "on_front": 0,
+      "trials": 40
+    },
+    "native_routing": {
+      "best_robustness": 0.1419316114779977,
+      "best_separability": 0.12757340428303246,
+      "feasible_trials": 33,
+      "on_front": 0,
+      "trials": 46
+    }
+  },
+  "search.by_target_head": {
+    "anchored": {
+      "best_robustness": 0.11119199374822533,
+      "best_separability": 0.13993159772073976,
+      "feasible_trials": 190,
+      "on_front": 4,
+      "trials": 193
+    },
+    "multiclass": {
+      "best_robustness": 0.1254250450600248,
+      "best_separability": 0.11953050447727623,
+      "feasible_trials": 297,
+      "on_front": 16,
+      "trials": 307
+    }
+  },
+  "search.elbow.drift_recovered_vs_extreme": 0.18508600455371116,
+  "search.elbow.first_declined_step": {
+    "exchange": 0.21702598631800676,
+    "to": 239
+  },
+  "search.elbow.last_step_drift_recovered": 0.07588843379336263,
+  "search.elbow.last_step_separability_given_up": 0.22527719595750906,
+  "search.elbow.later_steps_clearing_threshold": 6,
+  "search.elbow.robustness_extreme_trial": 321,
+  "search.elbow.separability_extreme_trial": 347,
+  "search.elbow.separability_extreme_values": [
+    0.11953050447727623,
+    0.18887725300203356
+  ],
+  "search.elbow.separability_given_up_vs_extreme": 0.04020110467348825,
+  "search.elbow.steps": [
+    {
+      "drift_gain": 0.019677932727616976,
+      "exchange": 7.703179267967115,
+      "from": 347,
+      "separability_cost": 0.0025545209377958594,
+      "to": 319
+    },
+    {
+      "drift_gain": 0.015280603381609859,
+      "exchange": 6.789154295709689,
+      "from": 319,
+      "separability_cost": 0.002250737384369983,
+      "to": 322
+    },
+    {
+      "drift_gain": 0.0015297033137050553,
+      "exchange": 0.21702598631800676,
+      "from": 322,
+      "separability_cost": 0.007048479952366585,
+      "to": 239
+    },
+    {
+      "drift_gain": 0.005313579750537922,
+      "exchange": 2.914796741294682,
+      "from": 239,
+      "separability_cost": 0.0018229675075654705,
+      "to": 491
+    },
+    {
+      "drift_gain": 0.001218505649229762,
+      "exchange": 1.3989344587239139,
+      "from": 491,
+      "separability_cost": 0.0008710241152693199,
+      "to": 128
+    },
+    {
+      "drift_gain": 0.0005302172694212903,
+      "exchange": 0.09847497675704099,
+      "from": 128,
+      "separability_cost": 0.005384284280964602,
+      "to": 380
+    },
+    {
+      "drift_gain": 0.0006006762741987692,
+      "exchange": 0.5158850213143885,
+      "from": 380,
+      "separability_cost": 0.0011643607574965964,
+      "to": 362
+    },
+    {
+      "drift_gain": 0.0014268817351464347,
+      "exchange": 5.600945641594556,
+      "from": 362,
+      "separability_cost": 0.0002547572903671691,
+      "to": 146
+    },
+    {
+      "drift_gain": 0.0030628221524839627,
+      "exchange": 0.9315532574506219,
+      "from": 146,
+      "separability_cost": 0.0032878658605799693,
+      "to": 27
+    },
+    {
+      "drift_gain": 0.00039049638879082305,
+      "exchange": 0.08535695608932956,
+      "from": 27,
+      "separability_cost": 0.004574863100579085,
+      "to": 376
+    },
+    {
+      "drift_gain": 0.0015810777107189145,
+      "exchange": 0.8211705690783001,
+      "from": 376,
+      "separability_cost": 0.0019253950034930634,
+      "to": 162
+    },
+    {
+      "drift_gain": 0.004443090785350323,
+      "exchange": 3.923502689514205,
+      "from": 162,
+      "separability_cost": 0.00113242965201088,
+      "to": 435
+    },
+    {
+      "drift_gain": 0.000789375712473811,
+      "exchange": 0.3917851925492619,
+      "from": 435,
+      "separability_cost": 0.0020148176283475983,
+      "to": 413
+    },
+    {
+      "drift_gain": 0.0010317596716415411,
+      "exchange": 0.4762164666883115,
+      "from": 413,
+      "separability_cost": 0.0021665770585728994,
+      "to": 231
+    },
+    {
+      "drift_gain": 0.0018385925224241317,
+      "exchange": 0.23782838746070004,
+      "from": 231,
+      "separability_cost": 0.007730753010836228,
+      "to": 187
+    },
+    {
+      "drift_gain": 0.001189712950679822,
+      "exchange": 0.9818099212834962,
+      "from": 187,
+      "separability_cost": 0.001211754867097431,
+      "to": 150
+    },
+    {
+      "drift_gain": 0.003547179945979362,
+      "exchange": 1.041367299003306,
+      "from": 150,
+      "separability_cost": 0.003406271686631962,
+      "to": 214
+    },
+    {
+      "drift_gain": 0.00510191762136003,
+      "exchange": 2.6825840161664454,
+      "from": 214,
+      "separability_cost": 0.0019018668532331529,
+      "to": 83
+    },
+    {
+      "drift_gain": 0.009131133690439441,
+      "exchange": 0.2381006468676018,
+      "from": 83,
+      "separability_cost": 0.038349890311372814,
+      "to": 321
+    }
+  ],
+  "search.elbow.steps_taken": 2,
+  "search.elbow.threshold": 1.0,
+  "search.front.by_backbone": {
+    "catboost": 0,
+    "lightgbm": 0,
+    "rf": 1,
+    "xgboost": 19
+  },
+  "search.front.size": 20,
+  "search.front.trials": [
+    347,
+    319,
+    322,
+    239,
+    491,
+    128,
+    380,
+    362,
+    146,
+    27,
+    376,
+    162,
+    435,
+    413,
+    231,
+    187,
+    150,
+    214,
+    83,
+    321
+  ],
+  "search.hypervolume.early_trials": 100,
+  "search.hypervolume.final": 0.0219078601613627,
+  "search.hypervolume.last_rise_trial": 491,
+  "search.hypervolume.reference": [
+    0.28469975172793627,
+    0.25600200237883636
+  ],
+  "search.hypervolume.share_after_early_trials": 0.9368497094031112,
+  "search.hypervolume.visible_rises_after_early_trials": [
+    319,
+    321,
+    347
+  ],
+  "search.importance.design.robustness": {
+    "classifier": 0.5276966198290378,
+    "mv_strategy": 0.4555575892037016,
+    "target_head": 0.0167457909672604
+  },
+  "search.importance.design.separability": {
+    "classifier": 0.7449064215166463,
+    "mv_strategy": 0.2430241372965148,
+    "target_head": 0.01206944118683884
+  },
+  "search.importance.hyperparameters.backbone": "xgboost",
+  "search.importance.hyperparameters.robustness": {
+    "colsample_bytree": 0.24014268466115418,
+    "learning_rate": 0.2211703163729157,
+    "max_depth": 0.1395505314256564,
+    "min_child_weight": 0.09118219119577618,
+    "n_estimators": 0.16568245649005242,
+    "subsample": 0.14227181985444512
+  },
+  "search.importance.hyperparameters.separability": {
+    "colsample_bytree": 0.0913378792439453,
+    "learning_rate": 0.3212848859667311,
+    "max_depth": 0.05918166515905544,
+    "min_child_weight": 0.16380714971377944,
+    "n_estimators": 0.2322550065785092,
+    "subsample": 0.13213341333797957
+  },
+  "search.importance.seed": 0,
+  "search.n_failed_fits": 0,
+  "search.n_feasible": 487,
+  "search.n_infeasible_by_design": 13,
+  "search.n_trials": 500,
+  "search.selected.backbone": "xgboost",
+  "search.selected.backbone_seed": 7,
+  "search.selected.class_means": {
+    "BB": 0.5405761105375718,
+    "BL": 0.7592566750752566,
+    "BT": 0.25576247231395177,
+    "LL": 0.8649539812404321,
+    "TT": 0.07181404350000384
+  },
+  "search.selected.hyperparams": {
+    "colsample_bytree": 0.7830903456125354,
+    "learning_rate": 0.01889711055684212,
+    "max_depth": 3,
+    "min_child_weight": 7,
+    "n_estimators": 477,
+    "subsample": 0.8918691255376182
+  },
+  "search.selected.label_mae_macro": 0.12433576279944207,
+  "search.selected.label_mae_micro": 0.1253372091031679,
+  "search.selected.masking_mae": 0.15391871689280673,
+  "search.selected.missing_values": "knn",
+  "search.selected.target_head": "multiclass",
+  "search.selected.trial": 322
+}
